@@ -132,9 +132,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                     ),
                   ),
-                  
 
-                  SizedBox(height: 60,),
+                  SizedBox(height: 60),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -152,25 +151,23 @@ class _MainPageState extends State<MainPage> {
                           ],
                         ),
 
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.symmetric(vertical: 15),
-                            backgroundColor: Colors.blue.shade100,
-                            elevation: 0,
-                            
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 15,
                           ),
-                          
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
-                                padding: EdgeInsets.all(3),
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.grey[700],
+                              GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.grey[700],
+                                  ),
+                                  child: Icon(Icons.sync, color: Colors.white),
                                 ),
-                                child: Icon(Icons.sync, color: Colors.white),
                               ),
                               SizedBox(width: 8),
                               Text(
@@ -200,18 +197,22 @@ class _MainPageState extends State<MainPage> {
                             //   ),
                             // ],
                           ),
-                        
+
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.symmetric(vertical: 15),
+                              padding: EdgeInsets.symmetric(vertical: 15),
                               backgroundColor: Colors.blue,
                               elevation: 0,
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                Icon(Icons.lightbulb, color: Colors.white,size: 30,),
+                                Icon(
+                                  Icons.lightbulb,
+                                  color: Colors.white,
+                                  size: 30,
+                                ),
                                 // SizedBox(width: 5),
                                 Text(
                                   'Омӯхтан!',
@@ -221,45 +222,48 @@ class _MainPageState extends State<MainPage> {
                                   ),
                                 ),
 
-                                SizedBox()
+                                SizedBox(),
                               ],
                             ),
                           ),
                         ),
                       ),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.6,
-                        decoration: BoxDecoration(
-                          color: Colors.blue.shade100,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.blue[200]!,
-                              offset: Offset(1, 4),
-                              spreadRadius: 0.5,
-                            ),
-                          ],
-                        ),
-
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue.shade100,
-                            elevation: 0,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.hexagon_outlined, color: Colors.grey,size: 20,),
-                              SizedBox(width: 5),
-                              Text(
-                                'Танзими категорияҳо',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.grey,
-                                ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.blue[200]!,
+                                offset: Offset(1, 4),
+                                spreadRadius: 0.5,
                               ),
                             ],
+                          ),
+
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 15),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.hexagon_outlined,
+                                  color: Colors.grey,
+                                  size: 20,
+                                ),
+                                SizedBox(width: 5),
+                                Text(
+                                  'Танзими категорияҳо',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

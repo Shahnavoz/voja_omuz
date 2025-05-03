@@ -174,8 +174,11 @@ class _StatisticPageState extends State<StatisticPage> {
                                         ),
                                       ),
                                       Text(
+                                        maxLines: 2,
                                         'тангаҳои\nба даст оварда',
                                         style: TextStyle(
+                                          overflow: TextOverflow.ellipsis,
+
                                           fontWeight: FontWeight.w400,
                                           fontSize: 10,
                                         ),
@@ -215,8 +218,11 @@ class _StatisticPageState extends State<StatisticPage> {
                                         ),
                                       ),
                                       Text(
+                                        maxLines: 2,
+
                                         'ғалабаҳо\nдар мусобиқаҳо',
                                         style: TextStyle(
+                                          overflow: TextOverflow.ellipsis,
                                           fontWeight: FontWeight.w400,
                                           fontSize: 10,
                                         ),
@@ -258,6 +264,7 @@ class _StatisticPageState extends State<StatisticPage> {
                                         ),
                                       ),
                                       Text(
+                                        maxLines: 2,
                                         'вожаҳои\nомӯхташуда',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w400,
@@ -314,231 +321,249 @@ class _StatisticPageState extends State<StatisticPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    // border: Border.all(),
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color(0xFFF0F5FF),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 10,
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Color(0xFFF0F5FF),
                                     ),
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            // border: Border.all(),
-                                            shape: BoxShape.circle,
-                                            color: Colors.grey[300],
-                                          ),
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(20.0),
-                                            child: Icon(
-                                              FontAwesomeIcons.bookOpen,
-                                              size: 35,
-                                              color: Colors.grey[400],
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 10,
+                                      ),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.grey[300],
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(
+                                                20.0,
+                                              ),
+                                              child: Icon(
+                                                FontAwesomeIcons.bookOpen,
+                                                size: 35,
+                                                color: Colors.grey[400],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        SizedBox(height: 10),
-                                        Text(
-                                          'Навкор дар\nвожаҳо',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.bold,
+                                          SizedBox(height: 10),
+                                          Text(
+                                            maxLines: 2,
+                                            'Навкор дар\nвожаҳо',
+                                            textAlign: TextAlign.center,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
                                         ),
-                                      ],
+                                      ),
+                                      Text('/', style: TextStyle(fontSize: 20)),
+                                      Text(
+                                        '50',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  Container(
+                                    height: 15,
+                                    width: 110,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF0F5FF),
+                                      borderRadius: BorderRadius.circular(15),
                                     ),
                                   ),
-                                ),
-                                SizedBox(height: 10),
-
-                                Row(
-                                  children: [
-                                    Text(
-                                      '0',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.blue,
-                                      ),
-                                    ),
-                                    Text('/', style: TextStyle(fontSize: 20)),
-                                    Text(
-                                      '50',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 10),
-
-                                Container(
-                                  height: 15,
-                                  width: 110,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFF0F5FF),
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                            Column(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    // border: Border.all(),
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color(0xFFF0F5FF),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 15,
-                                      vertical: 10,
+
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Color(0xFFF0F5FF),
                                     ),
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            // border: Border.all(),
-                                            shape: BoxShape.circle,
-                                            color: Colors.grey[300],
-                                          ),
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(20.0),
-                                            child: Icon(
-                                              FontAwesomeIcons.bookBookmark,
-                                              size: 35,
-                                              color: Colors.grey[400],
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 15,
+                                        vertical: 10,
+                                      ),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.grey[300],
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(
+                                                20.0,
+                                              ),
+                                              child: Icon(
+                                                FontAwesomeIcons.bookBookmark,
+                                                size: 35,
+                                                color: Colors.grey[400],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        SizedBox(height: 10),
-                                        Text(
-                                          'Луғат дар\nҷайб',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.bold,
+                                          SizedBox(height: 10),
+                                          Text(
+                                            maxLines: 2,
+                                            'Луғат дар\nҷайб',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              overflow: TextOverflow.ellipsis,
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
                                         ),
-                                      ],
+                                      ),
+                                      Text('/', style: TextStyle(fontSize: 20)),
+                                      Text(
+                                        '100',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  Container(
+                                    height: 15,
+                                    width: 110,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF0F5FF),
+                                      borderRadius: BorderRadius.circular(15),
                                     ),
                                   ),
-                                ),
-                                SizedBox(height: 10),
-
-                                Row(
-                                  children: [
-                                    Text(
-                                      '0',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.blue,
-                                      ),
-                                    ),
-                                    Text('/', style: TextStyle(fontSize: 20)),
-                                    Text(
-                                      '100',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 10),
-
-                                Container(
-                                  height: 15,
-                                  width: 110,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFF0F5FF),
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                            Column(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color(0xFFF0F5FF),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 15,
-                                      vertical: 10,
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Color(0xFFF0F5FF),
                                     ),
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.grey[300],
-                                          ),
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(20.0),
-                                            child: Icon(
-                                              FontAwesomeIcons.book,
-                                              size: 35,
-                                              color: Colors.grey[400],
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 15,
+                                        vertical: 10,
+                                      ),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.grey[300],
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(
+                                                20.0,
+                                              ),
+                                              child: Icon(
+                                                FontAwesomeIcons.book,
+                                                size: 35,
+                                                color: Colors.grey[400],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        SizedBox(height: 10),
-                                        Text(
-                                          'Дӯстдори\nвожаҳо',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.bold,
+                                          SizedBox(height: 10),
+                                          Text(
+                                            maxLines: 2,
+                                            'Дӯстдори\nвожаҳо',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              overflow: TextOverflow.ellipsis,
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '0',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.blue,
                                         ),
-                                      ],
+                                      ),
+                                      Text('/', style: TextStyle(fontSize: 20)),
+                                      Text(
+                                        '200',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  Container(
+                                    height: 15,
+                                    width: 110,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFF0F5FF),
+                                      borderRadius: BorderRadius.circular(15),
                                     ),
                                   ),
-                                ),
-                                SizedBox(height: 10),
-
-                                Row(
-                                  children: [
-                                    Text(
-                                      '0',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.blue,
-                                      ),
-                                    ),
-                                    Text('/', style: TextStyle(fontSize: 20)),
-                                    Text(
-                                      '200',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 10),
-
-                                Container(
-                                  height: 15,
-                                  width: 110,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFF0F5FF),
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ],
                         ),

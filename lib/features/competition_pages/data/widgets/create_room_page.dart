@@ -30,7 +30,6 @@ class CreateRoomPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(25),
                   ),
 
-                  // height: 200,
                   width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
@@ -111,7 +110,6 @@ class CreateRoomPage extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.all(15),
             decoration: BoxDecoration(
-              // border: Border.all(),
               borderRadius: BorderRadius.circular(15),
               color: Colors.white,
             ),
@@ -169,79 +167,81 @@ class CreateRoomPage extends StatelessWidget {
                 builder: (context) {
                   return Container(
                     margin: EdgeInsets.symmetric(horizontal: 10, vertical: 150),
-                    padding: EdgeInsets.all(15),
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
                     ),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/premium-removebg-preview.png',
-                          width: 200,
-                        ),
-                        SizedBox(height: 15),
-
-                        Text(
-                          'Танҳо барои нафарони дорои аккаунти Преимум.',
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 15),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/premium-removebg-preview.png',
+                            width: 200,
                           ),
-                          textAlign: TextAlign.center,
-                        ),
-                        SizedBox(height: 35),
-
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(vertical: 15),
-                                  backgroundColor: Colors.amber,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                          SizedBox(height: 15),
+                      
+                          Text(
+                            'Танҳо барои нафарони дорои аккаунти Преимум.',
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 35),
+                      
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: double.infinity,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    padding: EdgeInsets.symmetric(vertical: 15),
+                                    backgroundColor: Colors.amber,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
                                   ),
-                                ),
-                                child: Text(
-                                  'Преимум харед',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.white,
+                                  child: Text(
+                                    'Преимум харед',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            SizedBox(height: 25),
-
-                            Container(
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(vertical: 15),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                              SizedBox(height: 25),
+                      
+                              Container(
+                                width: double.infinity,
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    padding: EdgeInsets.symmetric(vertical: 15),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
                                   ),
-                                ),
-                                child: Text(
-                                  'Фаҳмо',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.black,
+                                  child: Text(
+                                    'Фаҳмо',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.black,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
