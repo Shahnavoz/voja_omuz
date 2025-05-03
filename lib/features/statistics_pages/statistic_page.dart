@@ -402,6 +402,7 @@ class _StatisticPageState extends State<StatisticPage> {
                                 ],
                               ),
                             ),
+                            SizedBox(width: 10),
 
                             Expanded(
                               child: Column(
@@ -484,6 +485,7 @@ class _StatisticPageState extends State<StatisticPage> {
                                 ],
                               ),
                             ),
+                            SizedBox(width: 10,),
                             Expanded(
                               child: Column(
                                 children: [

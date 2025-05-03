@@ -166,32 +166,36 @@ class CreateRoomPage extends StatelessWidget {
                 context: context,
                 builder: (context) {
                   return Container(
-                    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 150),
+                    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 120),
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 15),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 15,
+                        vertical: 40,
+                      ),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
                             'assets/images/premium-removebg-preview.png',
-                            width: 200,
+                            width: 150,
                           ),
                           SizedBox(height: 15),
-                      
+
                           Text(
                             'Танҳо барои нафарони дорои аккаунти Преимум.',
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                             textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 35),
-                      
+
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -216,7 +220,7 @@ class CreateRoomPage extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(height: 25),
-                      
+
                               Container(
                                 width: double.infinity,
                                 child: ElevatedButton(
